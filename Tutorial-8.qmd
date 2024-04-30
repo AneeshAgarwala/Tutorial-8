@@ -12,4 +12,8 @@ data <- read.csv("Data_Tables_Criminal_Incidents_Visualisation_Year_Ending_Decem
 
 # Introduction
 
+<<<<<<< HEAD
 Hi 
+=======
+Hi guys
+>>>>>>> newbranch_rram0049
