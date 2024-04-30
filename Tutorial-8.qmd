@@ -6,6 +6,20 @@ editor: visual
 
 # Data
 
-```{r}
-data <- read.csv("Data_Tables_Criminal_Incidents_Visualisation_Year_Ending_December_2019.csv")
+```{r, message=FALSE}
+data <- read_csv("Data_Tables_Criminal_Incidents_Visualisation_Year_Ending_December_2019.csv")
 ```
+
+```{r, warning=FALSE, message=FALSE}
+library(tidyverse)
+
+data %>% 
+  group_by(`Offence Subdivision`) %>%
+  summarise(avg = mean(`Rate per 100,000 population`)) %>%
+  head(10) %>%
+  ggplot(aes(x = fct_reorder(`Offence Subdivision`, avg), y = avg)) +
+  geom_col() +
+  theme(axis.text.x = element_text(angle = 90))
+  
+```
+B20 Property damage is the highest.
