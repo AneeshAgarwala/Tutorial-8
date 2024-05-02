@@ -2,11 +2,15 @@
 title: "Tutorial 8"
 format: html
 editor: visual
+bibliography: references.bib
 ---
+
+Thanks to @tidy
 
 # Data
 
 ```{r, message=FALSE}
+library(tidyverse)
 data <- read_csv("Data_Tables_Criminal_Incidents_Visualisation_Year_Ending_December_2019.csv")
 ```
 
